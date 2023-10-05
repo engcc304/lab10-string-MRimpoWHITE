@@ -31,7 +31,44 @@
 
 int main() {
 
-    //--| YOUR CODE HERE
+    char ip[99] ;
+    int HMchar = 0 ;
+    int pass = 0 ;
+
+    printf( "Input : " ) ;
+    scanf( "%s" , ip ) ; 
+
+    for ( int i = 0; ip[ i ] != '\0' ; i++ )
+    {
+        HMchar++ ;
+    }
+    
+
+    for ( int i = 0 ; ip[ i ] != '\0' ; i++ )
+    {
+        for (int i = 0; i < HMchar%2 ; i++)
+        {
+            if ( ip[ i ] == ip[ HMchar - 1 ] )
+            {
+            pass++ ;
+            }
+        }
+    }
+    
+    printf("pass = %d\n" , pass) ;
+
+    if ( pass > 1 && pass != 1)
+    {
+        printf( "pass." ) ;
+    }
+
+    else
+    {
+        printf( "Not pass." ) ;
+    }
+    
+    
+    
 
     return 0 ;
 }//end main function
